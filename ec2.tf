@@ -6,7 +6,7 @@ resource "aws_instance" "public" {
   iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
   availability_zone      = "${var.region}a"
   vpc_security_group_ids = [aws_security_group.docker_on_ec2.id, ]
-  key_name               = var.ssh_key
+  key_name               = var.first_key
   
   # User data script to configure docker 
   user_data = <<-EOF
