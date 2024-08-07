@@ -1,4 +1,4 @@
-# variables.tf
+# variables.tf files
 variable "region" {
   type    = string
   default = "us-east-1"
